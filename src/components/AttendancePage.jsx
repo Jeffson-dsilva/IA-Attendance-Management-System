@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import {
-  ResponsiveContainer, RadialBarChart, RadialBar, Legend, Tooltip, LineChart, Line, XAxis, YAxis, CartesianGrid
-} from "recharts";
+  ResponsiveContainer, RadialBarChart, RadialBar, Legend, Tooltip} from "recharts";
 
 const AttendancePage = () => {
   const [attendanceData, setAttendanceData] = useState([]);

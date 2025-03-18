@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
-  FaBars, FaTimes, FaUserTie, FaChalkboardTeacher, FaUserGraduate,
-  FaClipboardList, FaTable, FaFileDownload, FaSignOutAlt, FaMoon, FaSun
+  FaBars, FaTimes, FaUserTie, FaChalkboardTeacher, FaUserGraduate, FaSignOutAlt, FaMoon, FaSun
 } from "react-icons/fa";
 import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
 import ManageFaculty from "./ManageFaculty";
 import ManageStudents from "./ManageStudents";
-import ManageTimetable from "./ManageTimetable";
 
 const COLORS = ["#0088FE", "#FFBB28"]; // Colors for Pie Charts
 
