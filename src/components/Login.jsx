@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+const API_URL = process.env.REACT_APP_API_URL;
 
 const Login = () => {
   const [role, setRole] = useState("Select Role");
@@ -20,7 +21,7 @@ const Login = () => {
   
     try {
       console.log("🔹 Sending login request...");
-      const response = await fetch("http://localhost:5000/api/login", {
+      const response = await fetch(`${API_URL}/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
