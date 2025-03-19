@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+const cors = require("cors");
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,3 +18,15 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+const app = express();
+
+// ✅ CORS Configuration (Allow requests from Netlify & Localhost)
+app.use(
+  cors({
+    origin: ["http://localhost:3000", "https://ia-attendance-management.netlify.app/"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
+
+app.use(express.json());
